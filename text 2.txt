@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="G and J Lawncare - 10 years of experience in professional mowing, landscaping, and landscaping curbing in Horry County.">
+    <title>G and J Lawncare | Professional Lawn Maintenance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .hero-section {
+            background-color: #064e3b; 
+            background-image: radial-gradient(circle at 2px 2px, #065f46 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .sticky-nav {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-hover-effect {
+            will-change: transform;
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-hover-effect:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-hover-effect:active {
+            transform: scale(0.98);
+        }
+
+        .contact-link {
+            transition: all 0.2s ease;
+            position: relative;
+            z-index: 99;
+        }
+        
+        .contact-link:hover {
+            color: #86efac;
+            text-decoration: underline;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23374151'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+        }
+
+        @media screen and (max-width: 768px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 sticky-nav border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="#home" class="text-xl font-bold text-green-800 flex items-center tracking-tight">
+                        <i class="fas fa-leaf mr-2 text-green-600"></i> G & J <span class="text-gray-900 ml-1">Lawncare</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#home" class="text-sm text-gray-600 hover:text-green-700 font-semibold transition">Home</a>
+                    <a href="#services" class="text-sm text-gray-600 hover:text-green-700 font-semibold transition">Services</a>
+                    <a href="#about" class="text-sm text-gray-600 hover:text-green-700 font-semibold transition">About</a>
+                    <a href="tel:8437987776" class="text-sm text-green-800 font-bold hidden lg:block"><i class="fas fa-phone mr-1"></i> 843-798-7776</a>
+                    <a href="#contact" class="bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-800 transition text-sm font-bold shadow-sm">Get a Quote</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" aria-label="Toggle Menu" class="text-gray-700 p-2 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 py-6 space-y-3 shadow-xl">
+            <a href="#home" class="mobile-link block py-2 text-gray-800 hover:text-green-700 font-semibold">Home</a>
+            <a href="#services" class="mobile-link block py-2 text-gray-800 hover:text-green-700 font-semibold">Services</a>
+            <a href="#about" class="mobile-link block py-2 text-gray-800 hover:text-green-700 font-semibold">About</a>
+            <div class="pt-4 border-t border-gray-100">
+                <a href="tel:8437987776" class="block text-green-800 font-bold mb-4"><i class="fas fa-phone mr-2"></i> 843-798-7776</a>
+                <a href="#contact" class="mobile-link block text-center bg-green-700 text-white py-3 rounded-lg font-bold">Get a Free Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section min-h-[85vh] flex items-center justify-center text-center text-white pt-16 px-4">
+        <div class="max-w-3xl">
+            <div class="inline-block bg-white/10 backdrop-blur-md border border-white/10 px-4 py-1.5 rounded-full mb-6 text-xs font-bold tracking-widest uppercase">
+                <i class="fas fa-star mr-2 text-yellow-400"></i> 10 Years Experience
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight tracking-tight">Your Dream Lawn <br class="hidden md:block"> Starts Here.</h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-200 font-medium max-w-xl mx-auto leading-relaxed">Expert mowing, landscaping, and Landscaping Curbing for Horry County. Quality you can trust.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="btn-hover-effect w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-xl text-base font-bold shadow-lg">Request Free Estimate</a>
+                <a href="#services" class="btn-hover-effect w-full sm:w-auto bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl text-base font-bold border border-white/20">Our Services</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="mb-16">
+                <h2 class="text-green-700 font-bold tracking-widest uppercase text-xs mb-3">Professional Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">What We Offer</h3>
+                <div class="w-12 h-1 bg-green-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mowing -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 text-left">
+                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cut text-green-700 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">Weekly/Biweekly Mowing</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Precision cutting, edging, and string trimming followed by thorough debris removal.</p>
+                </div>
+
+                <!-- Installations -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 text-left">
+                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-layer-group text-green-700 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">Full Installations</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Professional installation of mulch, pine straw, rock, and sod to transform your curb appeal.</p>
+                </div>
+
+                <!-- Hardscape -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 text-left">
+                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-hammer text-green-700 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">Hardscape</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Expert construction of beautiful outdoor living spaces, including patios and decking.</p>
+                </div>
+
+                <!-- Hauling -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 text-left">
+                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-truck-loading text-green-700 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">Hauling</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Junk removal, rock hauling, and professional transport of anything needed to be moved.</p>
+                </div>
+
+                <!-- Curbing -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 text-left">
+                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-stream text-green-700 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">Landscaping Curbing</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Decorative concrete curbing that defines your flowerbeds and elevates your property value.</p>
+                </div>
+
+                <!-- Specialty Care -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 text-left">
+                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-hard-hat text-green-700 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-gray-900">Specialty Maintenance</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Tree trimming, flowerbed remodeling, and property grading to keep everything in peak condition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-12">
+                <a href="https://en-gb.facebook.com/profile.php?id=100083319381453" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-blue-50 text-blue-700 px-6 py-3 rounded-xl hover:bg-blue-100 transition-all font-bold text-sm shadow-sm border border-blue-100 group">
+                    <i class="fab fa-facebook text-xl group-hover:scale-110 transition"></i>
+                    <span>View Previous Jobs on Facebook</span>
+                </a>
+            </div>
+
+            <h2 class="text-green-700 font-bold tracking-widest uppercase text-xs mb-3">About G & J Lawncare</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">A Decade of Dedicated Service.</h3>
+            <p class="text-gray-600 text-base md:text-lg mb-10 leading-relaxed">
+                With over <strong>10 years of experience</strong> serving the local area, G and J Lawncare has built a reputation for excellence. We understand that your property is a significant investment, and we bring the equipment and expertise needed to keep it looking its best year-round.
+            </p>
+            
+            <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-gray-50 px-8 py-6 rounded-2xl border border-gray-100">
+                <div class="w-12 h-12 bg-green-700 text-white rounded-full flex items-center justify-center text-lg font-bold shadow-md">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="text-left">
+                    <div class="text-gray-900 font-bold text-lg">Grayson & Jameson Carroll</div>
+                    <div class="text-green-700 text-sm font-bold flex items-center">
+                        <i class="fas fa-check-circle mr-1.5"></i> Owners & Operators
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden grid lg:grid-cols-5 border border-gray-100">
+                <!-- Contact Sidebar -->
+                <div class="lg:col-span-2 bg-green-900 p-10 text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6 tracking-tight">Get In Touch</h3>
+                        <p class="text-green-100 mb-10 text-sm leading-relaxed">Ready for a transformation? Reach out today for a prompt, no-obligation estimate.</p>
+                        
+                        <div class="space-y-8">
+                            <!-- Phone -->
+                            <div class="flex items-start">
+                                <div class="bg-green-800 p-2.5 rounded-lg mr-4 text-xs shrink-0"><i class="fas fa-phone-alt"></i></div>
+                                <div>
+                                    <p class="text-green-300 text-[10px] font-bold uppercase tracking-wider mb-0.5">Call or Text</p>
+                                    <a href="tel:8437987776" class="contact-link text-xl font-bold">843-798-7776</a>
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="flex items-start">
+                                <div class="bg-green-800 p-2.5 rounded-lg mr-4 text-xs shrink-0"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <p class="text-green-300 text-[10px] font-bold uppercase tracking-wider mb-0.5">Email</p>
+                                    <a href="mailto:gcarroll4459@icloud.com" class="contact-link text-base font-bold break-all">gcarroll4459@icloud.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 pt-8 border-t border-green-800/50">
+                        <a href="https://en-gb.facebook.com/profile.php?id=100083319381453" target="_blank" class="inline-flex items-center gap-3 group contact-link">
+                            <i class="fab fa-facebook text-3xl group-hover:text-blue-400 transition"></i>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase tracking-wider text-green-300">Follow Us</p>
+                                <p class="text-sm font-bold">G & J Lawncare</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Area -->
+                <div class="lg:col-span-3 p-10">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Request a Free Quote</h3>
+                    <form id="quote-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5 ml-1">Your Name</label>
+                                <input type="text" placeholder="John Doe" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-green-600 focus:bg-white outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5 ml-1">Phone Number</label>
+                                <input type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" placeholder="843-000-0000" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-green-600 focus:bg-white outline-none transition">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5 ml-1">Select Service</label>
+                            <select required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-green-600 focus:bg-white outline-none transition cursor-pointer">
+                                <option value="" disabled selected>Select a service...</option>
+                                <option value="Weekly/Biweekly Mowing">Weekly/Biweekly Mowing</option>
+                                <option value="Hardscape (Patios/Decking)">Hardscape (Patios/Decking)</option>
+                                <option value="Hauling (Junk/Rock/Moving)">Hauling (Junk/Rock/Moving)</option>
+                                <option value="Landscaping Curbing">Landscaping Curbing</option>
+                                <option value="Mulch Installation">Mulch Installation</option>
+                                <option value="Pine Straw Installation">Pine Straw Installation</option>
+                                <option value="Rock Installation">Rock Installation</option>
+                                <option value="Sod Installation">Sod Installation</option>
+                                <option value="Flowerbed Remodeling">Flowerbed Remodeling</option>
+                                <option value="Bush Trimming">Bush Trimming</option>
+                                <option value="Tree Trimming">Tree Trimming</option>
+                                <option value="Dirt Work / Grading">Dirt Work / Grading</option>
+                                <option value="Spring/Fall Cleanup">Spring/Fall Cleanup</option>
+                                <option value="Full Property Maintenance">Full Property Maintenance</option>
+                                <option value="Other">Other (Specify below)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5 ml-1">
+                                Project Details <span class="text-gray-400 font-bold lowercase italic text-[11px] ml-1">(optional)</span>
+                            </label>
+                            <textarea rows="3" placeholder="Address and any specific details..." class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-green-600 focus:bg-white outline-none transition resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-green-700 hover:bg-green-600 text-white font-bold text-base py-4 rounded-xl transition shadow-md flex items-center justify-center gap-2 active:scale-95">
+                            <span>Send Quote Request</span>
+                            <i class="fas fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+                    
+                    <div id="success-msg" class="hidden mt-4 p-6 bg-green-50 border border-green-100 text-green-800 rounded-2xl text-center">
+                        <i class="fas fa-check-circle text-2xl text-green-600 mb-3 block"></i>
+                        <h4 class="font-bold text-lg mb-1">Request Received!</h4>
+                        <p class="text-sm">We will be in touch shortly to discuss your project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-500 py-16 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <div class="mb-8 text-center">
+                <span class="text-2xl font-bold text-white flex items-center justify-center tracking-tight">
+                    <i class="fas fa-leaf text-green-500 mr-2"></i> G & J <span class="text-green-500 ml-1.5 italic">Lawncare</span>
+                </span>
+                <p class="mt-2 text-xs font-bold uppercase tracking-widest text-gray-600">Professional Excellence Since 2016</p>
+            </div>
+            
+            <div class="flex items-center mb-8">
+                <a href="https://en-gb.facebook.com/profile.php?id=100083319381453" target="_blank" rel="noopener" aria-label="Facebook Page" class="text-gray-600 hover:text-blue-500 transition-all">
+                    <i class="fab fa-facebook text-3xl"></i>
+                </a>
+            </div>
+
+            <div class="text-[10px] uppercase tracking-widest text-center text-gray-700 border-t border-gray-900/50 pt-8 w-full max-sm leading-relaxed">
+                &copy; <span id="year"></span> G & J Lawncare. <br>
+                Grayson Carroll & Jameson Carroll.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Robust link handler for smooth scroll
+        document.addEventListener('click', function(e) {
+            const anchor = e.target.closest('a');
+            if (!anchor) return;
+
+            const href = anchor.getAttribute('href');
+            
+            // Allow phone/email links to work naturally
+            if (href && (href.startsWith('tel:') || href.startsWith('mailto:'))) {
+                return; 
+            }
+
+            // Handle smooth scroll for anchor tags
+            if (href && href.startsWith('#') && href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+
+        const form = document.getElementById('quote-form');
+        const successMsg = document.getElementById('success-msg');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.style.opacity = '0.5';
+            form.querySelectorAll('button, input, select, textarea').forEach(el => el.disabled = true);
+            
+            setTimeout(() => {
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            }, 600);
+        });
+    </script>
+</body>
+</html>
+
